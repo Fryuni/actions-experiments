@@ -15,3 +15,12 @@ jobs:
         run: |
           git status
           git branch -va
+          
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          check_run_annotations_branch: Fryuni-patch-1
+          pull_request_build: commit
+          files: test-results/**/*.xml
+
