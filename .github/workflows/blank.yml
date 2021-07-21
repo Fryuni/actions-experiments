@@ -22,5 +22,5 @@ jobs:
         with:
           check_run_annotations_branch: Fryuni-patch-1
           pull_request_build: commit
-          files: test-results/**/*.xml
+          files: *.xml
 
