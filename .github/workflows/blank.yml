@@ -25,7 +25,10 @@ jobs:
           check_run_annotations_branch: '*'
           files: '*.xml'
 
-      - uses: andymckay/labeler@1.0.2
+      - name: removelabel
+        uses: buildsville/add-remove-label@v1
         if: always()
         with:
-          remove-labels: "require integration tests"
+          token: ${{secrets.GITHUB_TOKEN}}
+          label: require integration tests
+          type: remove
