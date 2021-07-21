@@ -13,7 +13,7 @@ jobs:
       uses: ludeeus/action-eventdata@0.0.1
 
   build:
-    if: ${{ github.event.label.name == 'require integration tests' }}
+    if: ${{ github.event_name == 'push' || github.event.label.name == 'require integration tests' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
