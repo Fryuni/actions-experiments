@@ -1,0 +1,10 @@
+name: Show environment
+
+on:
+  release:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
