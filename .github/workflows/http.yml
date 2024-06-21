@@ -1,4 +1,4 @@
-name: CI
+name: HTTP
 
 on:
   push:
@@ -7,4 +7,5 @@ jobs:
   make-request:
     runs-on: ubuntu-latest
     steps:
+      - run: sudo apt install httpie
       - run: http httpbin.org/get
