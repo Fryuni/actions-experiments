@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt install httpie
-      - run: http -v httpbin.org/get
+      - run: http -v GET httpbin.org/get
