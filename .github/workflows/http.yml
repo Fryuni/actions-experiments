@@ -1,0 +1,10 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  make-request:
+    runs-on: ubuntu-latest
+    steps:
+      - run: http httpbin.org/get
